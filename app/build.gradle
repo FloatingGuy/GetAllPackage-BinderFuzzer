@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion '30.0.0' //''26.0.2'
+    defaultConfig {
+        applicationId "com.example.z9.getallpackage"
+        minSdkVersion 19
+        //noinspection ExpiredTargetSdkVersion
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+//    signingConfigs {
+//        release {
+//            keyAlias "z9"
+//            keyPassword "P@SO0olKc1"
+//            storeFile file("D:\\Astudio\\z9.jks")
+//            storePassword "P@SO0olKc1"
+//        }
+//    }
+    buildTypes {
+//        release {
+//            minifyEnabled true
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.release
+//        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.release
+        }
+    }
+}
+
+dependencies {
+    //noinspection GradleDeprecatedConfiguration
+    compile 'com.android.support:support-v4:25.2.0'
+    //noinspection GradleDeprecatedConfiguration
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.1'
+}

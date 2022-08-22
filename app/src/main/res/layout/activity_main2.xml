@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.z9.getallpackage.Main2Activity">
+
+    <Button
+        android:id="@+id/pms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pms"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="82dp" />
+
+    <Button
+        android:id="@+id/lms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_toEndOf="@+id/ams"
+        android:text="lms"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="167dp" />
+
+    <Button
+        android:id="@+id/ams"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv"
+        android:layout_marginBottom="59dp"
+        android:layout_toEndOf="@+id/pms"
+        android:text="ams"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="249dp" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/lms"
+        android:layout_marginEnd="29dp" />
+</android.widget.RelativeLayout>
