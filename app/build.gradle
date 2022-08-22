@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 29
-    buildToolsVersion '30.0.0' //''26.0.2'
+    buildToolsVersion '33.0.0 rc1' //''26.0.2'
     defaultConfig {
         applicationId "com.example.z9.getallpackage"
         minSdkVersion 19
@@ -10,7 +10,7 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
     lintOptions {
         checkReleaseBuilds false
@@ -41,9 +41,7 @@ android {
 }
 
 dependencies {
-    //noinspection GradleDeprecatedConfiguration
-    compile 'com.android.support:support-v4:25.2.0'
-    //noinspection GradleDeprecatedConfiguration
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 }
